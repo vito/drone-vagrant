@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mkdir -p /opt/store/droned
+
+exec /opt/drone/src/github.com/drone/drone/bin/droned \
+  -port=:80 \
+  -datasource=/opt/store/droned/drone.sqlite
